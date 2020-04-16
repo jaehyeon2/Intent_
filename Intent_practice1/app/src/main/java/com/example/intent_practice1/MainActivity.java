@@ -10,9 +10,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button start_btn;
-    Button first_btn;
-    Button second_btn;
-    Button third_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         start_btn = findViewById(R.id.start);
-        first_btn = findViewById(R.id.first);
-        second_btn = findViewById(R.id.second);
-        third_btn = findViewById(R.id.third);
 
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }
