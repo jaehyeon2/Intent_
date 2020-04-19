@@ -11,10 +11,9 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     Button login_btn;
     Button signup_btn;
-    EditText ID_;
-    EditText PW_;
-    String ID;
-    String PW;
+    EditText ID;
+    EditText PW;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +21,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         login_btn = findViewById(R.id.login);
         signup_btn = findViewById(R.id.signup);
-        ID_ = findViewById(R.id.Id);
-        PW_ = findViewById(R.id.Password);
-
-        ID = ID_.getText().toString();
-        PW = PW_.getText().toString();
+        ID = findViewById(R.id.Id);
+        PW = findViewById(R.id.Password);
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginResult.class);
-                intent.putExtra("ID", ID);
-                intent.putExtra("PW", PW);
+                intent.putExtra("ID", ID.getText().toString());
+                intent.putExtra("PW", PW.getText().toString());
                 startActivity(intent);
             }
         });

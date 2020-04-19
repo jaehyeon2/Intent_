@@ -14,6 +14,9 @@ public class LoginResult extends AppCompatActivity {
 
         super.onCreate(savedIntanceState);
         setContentView(R.layout.login_result);
+
+        id_rslt = findViewById(R.id.id_result);
+        pw_rslt = findViewById(R.id.pw_result);
         Intent intent = getIntent();
         String rcv_ID = intent.getExtras().getString("ID");
         String rcv_PW = intent.getExtras().getString("PW");
